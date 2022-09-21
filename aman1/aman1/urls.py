@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from course import views as cv
+from fees import views as fv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', cv.home),
+    path('learndj/', cv.learn_Django),
+    path('learnpy/', cv.learn_Python),
+    path('learnvar/', cv.learn_var),
+    path('learnm/', cv.learn_math),
+    path('learnf/', cv.learn_format),
+    path('feesdj/', fv.fees_Django),
+    path('feespy/', fv.fees_Python),
+    path('feesvar/', fv.fees_var),
+    path('feesm/', fv.fees_math),
+    path('feesf/', fv.fees_format),
 ]
