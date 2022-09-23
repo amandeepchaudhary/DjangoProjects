@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color:black ;
+            color: seashell;
+        }
+    </style>
+    <title>Django</title>
+</head>
+<body>
+    <h1>Django Course</h1> 
+    <h3>Course Name:{{nm|capfirst}} Duration:{{du|upper}} Total Seats:{{st|default:'Seats are Full'}} and Available on Platforms:{{av|lower}}</h3>
+    <h2>Teacher's Name:{{tn|length}}</h2>
+    <h2>Teacher's Name:{{tn|truncatechars:'2'}}</h2>
+    <h2>Teacher's Name:{{tn|slice:'3'}}</h2>
+    <h2>Today's Date & Time:{{dt|date:'D d M Y'}}</h2>
+    <h2>Today's Date & Time:{{dt|date:' d/m/Y'}}</h2>
+    <h2>Today's Date & Time:{{dt|date:'SHORT_DATE_FORMAT'}}</h2>
+    <h2>Today's Date & Time:{{dt|date:'DATE_FORMAT'}}</h2>
+    <h2>Today's Date & Time:{{dt|time:'H:i'}}</h2>
+    <h2>Today's Date & Time:{{dt|time:'TIME_FORMAT'}}</h2>
+</body>
+</html>
