@@ -4,9 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color:black;
+            color:seashell;
+        }
+    </style>
     <title>feeDjango</title>
 </head>
 <body>
-    fees Django = 300
+    {{names}}<br>       <!--Dot Lookup-->
+    {% for name in names %}
+    {{name}}<br>
+    {% endfor %}
+    
+    <br>
+
+    {% for name in names reversed %}     <!--reversed for loop-->
+    {{name}}<br>
+    {% endfor %}
+
+
+    <br>
+
+    {% for name in names %}     <!--Empty mai -->
+    {{name}}<br>
+    {% empty %}
+    <h3>Yha kuch nhi hai</h3>
+    {% endfor %}
+    
+    <br>
+
+    <!--Pre-Defined For Loop Variables-->
+    <h1>Pre-Defined For Loop Variables</h1>
+    <h2>CounterWithOne</h2>
+    {% for name in names %}
+    {{forloop.counter}}{{name}}<br>
+    {% endfor %}
+    
+    <br>
+
+    <h2>CounterWithZero</h2>
+    {% for name in names %}
+    {{forloop.counter0}}{{name}}<br>
+    {% endfor %}
+
+    <br>
+
+    <h2>RevCounter</h2>
+    {% for name in names %}
+    {{forloop.revcounter}}{{name}}<br>
+    {% endfor %}
+    
+    <br>
+
+    <h2>RevCounterWithZero</h2>
+    {% for name in names %}
+    {{forloop.revcounter0}}{{name}}<br>
+    {% endfor %}
+    
+    <br>
+    
+    <h2>First</h2>
+    {% for name in names %}
+    {{forloop.first}}{{name}}<br>
+    {% endfor %}
+    
+    <br>
+    
+    <h2>Last</h2>
+    {% for name in names %}
+    {{forloop.last}}{{name}}<br>
+    {% endfor %}
+    
+    <br>
+    
+    <h2>The forloop.parentloop is the last one which will be used in the nested loops so, The nested loops in feestwo.html</h2>
+
+    <h1>in feestwo.html</h1>
+
 </body>
 </html>

@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: black;
+            color: seashell;
+        }
+    </style>
     <title>Python</title>
 </head>
 <body>
     Python Course
     <h1>Course Name:{{nm}} Duration:{{du}} and Total Seats:{{st}}</h1>
+    <h2>if else with comparision operators:</h2>
+    {% if nm == 'Python' %}
+        <h4>the name is {{nm}}</h4>
+    {% endif %}
+    <h2>if with conditional operator</h2>
+    {% if nm == 'Python' and st == '40' %}
+        <h4>The name of the course is {{nm}} and available seats are {{st}}</h4>
+    {% endif %}
+    
+    {% if nm and st %}   <!--the code runs cause both the conditions are true-->
+        <h4>the course is {{nm}} and seats are {{st}}</h4>
+    {% endif %}
+
+    {% if nm or st %}
+        <h4>if only one gets true then also its ok!!!! so name:{{nm}} and seats:{{st}}</h4>
+    {% endif %}
+
+    {% if not st %}    <!--This will not run as the st is not False that is why-->
+        <h4>if seats not available</h4>
+    {% endif %}
+
+    {% if nm|length == 6 %}
+        <h4>The length of the  name of the course is 6 then this will run</h4>
+    {% endif %}
+
+    {% if not nm %}
+        <h4>No Course Available</h4>
+    {% else %}
+        <h4>The Available Course is {{nm}}</h4>
+    {% endif %}
+
+    <h1>in feesone.html</h1>
 </body>
 </html>

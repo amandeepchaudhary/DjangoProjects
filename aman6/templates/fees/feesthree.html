@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color:black;
+            color:seashell;
+        }
+    </style>
+    <title>DTL</title>
+</head>
+<body>
+    <!--With For loop Accessing key and values-->
+    <h1>{{stu.name}}</h1> <br>  <!--not able to get the keys only values are showing. So, for getting the keys we need for loop key and value-->
+
+    {% for key, value in stu.items %}   <!--".items is used "-->
+    {{key}} = {{value}}<br>
+    {% for k , v in value.items %}
+    {{forloop.parentloop.counter}}{{k}} = {{v}}<br>
+    {% endfor %}
+    {% endfor %}
+
+</body>
+</html>

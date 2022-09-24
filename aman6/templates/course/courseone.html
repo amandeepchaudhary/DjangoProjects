@@ -24,5 +24,14 @@
     <h2>Today's Date & Time:{{dt|date:'DATE_FORMAT'}}</h2>
     <h2>Today's Date & Time:{{dt|time:'H:i'}}</h2>
     <h2>Today's Date & Time:{{dt|time:'TIME_FORMAT'}}</h2>
+    <h2>Floating Point Filter Default:{{fp|floatformat}}</h2>
+    <h2>Floating Point Filter upto 3:{{fp1|floatformat:3}}</h2>
+    <h2>Floating Point Filter on zero:{{fp2|floatformat:0}}</h2>
+    
+    <h3>if else in html: </h3>
+        {% if nm == 'django' %}
+            <h1>Hello Django</h1>
+        {% endif %}
+    <h1>Remaining in Python's coursetwo.html</h1>
 </body>
 </html>
