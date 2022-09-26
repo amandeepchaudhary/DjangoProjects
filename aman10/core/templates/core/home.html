@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/hstyle.css' %}">
+    <script src="{% static 'core/js/alljs.js' %}"></script>
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Django</li>
+        </ul>
+    </nav>
+    <h1>This is home page!!!!!!</h1>
+    <h2>For about page click on clickme</h2>
+    <hr>
+    <form action="">
+        <input type="button" value="Clickme" onclick="dispabout()">
+    </form>
+    <h2>For Django page click on clickme</h2>
+    <hr>
+    <form action="">
+        <input type="button" value="Clickme" onclick="dispdjango()">
+    </form>
+</body>
+</html>
