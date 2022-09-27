@@ -14,9 +14,9 @@
 <body>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Django</li>
+            <li><a href="{% url '' %}">Home</a></li>
+            <li><a href="{% url 'aboutus' %}">About</a></li>
+            <li><a href="{% url 'django' %}">Django</a></li>
         </ul>
     </nav>
     <button type="button" class="btn btn-primary">Primary</button>
