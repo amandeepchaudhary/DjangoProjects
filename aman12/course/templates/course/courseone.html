@@ -1,3 +1,7 @@
 {% extends 'core/base.html' %}
 {% block title %}Course{% endblock title %}
-{% block content %}Course{% endblock content %}
+{% block content %}
+Course <!-- We can use the main variables in include templates too with "with" keyword and exclude with "only" keyword --> {{d}}
+<hr>
+{% include 'course/topcourses.html' with p='PHP' only %} <!--Only likhne k baad main variables ko voh nhi show krga include template-->
+{% endblock content %}

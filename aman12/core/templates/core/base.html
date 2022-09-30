@@ -13,13 +13,7 @@
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{% url '' %}"></a>Home</li>
-            <li><a href="{% url 'cor' %}">Course</a></li>
-        </ul>
-            
-    </nav>
+    {% include 'core/navbar.html' %}
     {% block content %}{% endblock content %}
     <script src="{% static 'core/js/js/JQuery.js' %}"></script>
     <script src="{% static 'core/js/js/popper.js' %}"></script>
