@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block allstatic %}
+    <!-- <link rel="stylesheet" href="{% static 'core/css/allcss.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+    {% endblock allstatic %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url '' %}"></a>Home</li>
+            <li><a href="{% url 'cor' %}">Course</a></li>
+        </ul>
+            
+    </nav>
+    {% block content %}{% endblock content %}
+    <script src="{% static 'core/js/js/JQuery.js' %}"></script>
+    <script src="{% static 'core/js/js/popper.js' %}"></script>
+    <script src="{% static 'core/js/js/all.min.js' %}"></script>
+    <script src="{% static 'core/js/js/bootstrap.js' %}"></script>
+</body>
+</html>
