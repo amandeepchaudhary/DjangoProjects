@@ -1,0 +1,70 @@
+/* Font */
+.st-font{
+    font-family: 'Satisfy';
+}
+html,body{
+    height: 100%;
+}
+
+.container-fluid{
+    min-height:100%;
+}
+
+/* Services Icon Color */
+.a-color{
+    color:chartreuse;
+}
+.m-color{
+    color:cyan;
+}
+.wd-color{
+    color:deepskyblue;
+}
+.wde-color{
+    color:orangered;
+}
+.s-color{
+    color:burlywood;
+}
+.d-color{
+    color:cadetblue;
+}
+.p-color{
+    color:gray;
+}
+.i-colo{
+    color:crimson;
+}
+.se-color{
+    color:lightyellow;
+}
+
+.youtube-color{
+    color:red;
+}
+
+.insta-color{
+    color:orangered;
+}
+
+.facebok-color{
+    color:cornflowerblue;
+}
+
+/* Services Subtitle Color */
+.ss-color{
+    color:aquamarine;
+}
+a.nav-link{
+    color:whitesmoke;
+}
+
+a.nav-link:hover{
+    color:goldenrod;
+    background-color:black;
+}
+a.nav-link.active{
+    color:goldenrod;
+    background-color:black;
+    font-weight: bolder;
+}

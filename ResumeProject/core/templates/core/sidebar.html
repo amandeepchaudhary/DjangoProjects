@@ -1,0 +1,15 @@
+{% load static %}
+<div class="border-end border-warning h-100">
+    <div class="text-center">
+        <img src="{% static 'core/images/photo1a.jpg' %}"   alt="Profile_Photo" class="img-fluid rounded-circle mt-5" width="100px" height="100px">
+        <h5 class="text-white mt-3 st-font"><b>Aman Chaudhary</b></h5>
+    </div>
+    <hr class="border-light">
+        <nav class="nav flex-column text-center">
+            <a href="{% url 'home' %}" class="nav-link {{home}}"><b>Home</b></a>
+            <a href="{% url 'services' %}" class="nav-link {{services}}"><b>Services</b></a>
+            <a href="{% url 'skill' %}" class="nav-link {{skills}}"><b>Skill</b></a>
+            <a href="{% url 'contact' %}" class="nav-link {{contact}}"><b>Contact</b></a>   
+        </nav>
+</div> 
+</div>

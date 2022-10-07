@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class="mt-5">
+    <div class="text-center">
+        <img src="{% static 'core/images/photo1a.jpg' %}" alt="Photo" class="img-thumbnail" width="250px" height="250px">
+    </div>
+    <div class=" mt-5 text-white mx-5 text-justify">
+        <h2 class="font-weight-bold st-font">Hello,</h2>
+        <div class="px-4" style="line-height:2rem;">
+            <p style="text-indent:100px;">I am <b class="text-warning">Aman Chaudhary</b> having experience of 5 years.dwjhdhwqhhdwh  dwid j jj jijdij jdiwjijd iwj ijidijwdj iwij idijjw ndij j experience of 5 years.dwjhdhwqhhdwh  dwid j jj jijdij jdiwjijd iwj ijidijwdj iwij idijjw ndij j
+            <p>Since earning , <b class="text-warning">Django</b> ok isn't it.iuyeyrwdwuiu 2udhjdjhsah hh whudhuh  hw hw uhwhquhwuhuqdhu idqwhd h qhd qwhhdqhwhduhwd uqhu hduwqh duqwuhduhqwu hduwd experience of 5 years.dwjhdhwqhhdwh  dwid j jj jijdij jdiwjijd iwj ijidijwdj iwij idijjw ndij jexperience of 5 years.dwjhdhwqhhdwh  dwid j jj jijdij jdiwjijd iwj ijidijwdj iwij idijjw ndij jexperience of 5 years.dwjhdhwqhhdwh  dwid j jj jijdij jdiwjijd iwj ijidijwdj iwij idijjw ndij j udhuh  hw hw uhwhquhwuhuqdhu idqwhd h qhd q udhuh  hw hw uhwhquhwuhuqdhu idqwhd h qhd q</p>
+
+            </p>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mr-5">Hire Me</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline-info my-3">Contact</a>
+    </div>
+</div>
+{% endblock content %}
