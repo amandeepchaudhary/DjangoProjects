@@ -3,5 +3,5 @@ from enroll import views
 
 urlpatterns = [
     path('', views.stuhome),
-    path('info/', views.stuinfo,name='info')
+    path('info/', views.stuinfo, name='info')
 ]

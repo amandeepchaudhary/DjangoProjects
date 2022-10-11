@@ -1,10 +1,31 @@
 {% extends 'enroll/home.html' %}
 {% block content %}
 <h1>Students Info</h1>
+<style>
+    th,td{
+        border: 1px black solid ; 
+    }
+</style>
 
 {% if stu %}
     <h2>Show data</h2>
     <h1>{{stu}}</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+        </tr>
+        <tr>
+            <th>{{stu.stuid}}</th>
+            <th>{{stu.stuname}}</th>
+            <th>{{stu.stumail}}</th>
+            <th>{{stu.stuphone}}</th>
+        </tr>
+    </table>
+
+    
 {% else %}
     <h2>No data</h2>
 {% endif %}
