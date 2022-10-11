@@ -1,6 +1,11 @@
 {% extends 'enroll/home.html' %}
 {% block content %}
-<h1>Students Info
-    
-</h1>
+<h1>Students Info</h1>
+
+{% if stu %}
+    <h2>Show data</h2>
+    <h1>{{stu}}</h1>
+{% else %}
+    <h2>No data</h2>
+{% endif %}
 {% endblock content %}
