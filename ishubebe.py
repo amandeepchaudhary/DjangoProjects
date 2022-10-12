@@ -5,7 +5,7 @@ time.sleep(4)
 
 count = 0
 
-while count <= 1:
-    pyautogui.typewrite("love " + str(count))
+while count <= 1000:
+    pyautogui.typewrite("bebe" + str(count))
     pyautogui.press("enter")
     count = count + 1
