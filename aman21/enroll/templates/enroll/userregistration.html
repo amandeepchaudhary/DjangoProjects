@@ -8,10 +8,36 @@
 </head>
 <body>
     <form action="" method="get">
-        <table>
-            {{form.as_p}}
-        </table>
-        <input type="submit" value="Submit">
+        <div>
+            <label for="id_first_name">First Name:</label>
+            <input type="text" name="first_name" required id="id_first_name">
+        </div>
+        <hr>
+
+        <div>
+            <label for="form.first_name.id_for_label">First Name Id</label>
+            {{form.first_name}}  <!-- input in hardcode -->
+        </div>
+        <hr>
+
+        <div>
+            {{form.first_name.label_tag}}  <!-- Label tag in hardcode -->
+            {{form.first_name}}    
+        </div>
+        <hr>
+
+        <div>
+            {{form.first_name.label}}  <!-- Gives Label as a text -->
+            <hr>
+            {{form.first_name.value}}  <!-- Gives the default value of constructor in text form by giving the initial --> 
+            <hr>
+            {{form.first_name.html_name}}  <!-- Gives the name of the html name in text form --> 
+            <hr>
+            {{form.first_name.help_text}}  <!-- for giving the help text in the page by giving the help_text in constructor -->
+            <hr>
+            {{form.first_name.field.required}}  <!-- for checking about the attribute of the field -->
+        </div>
     </form>
+    <h1>Toh abb hum agar email likh de forms mai toh hume voh iss page pr nhi dikhega kyuki humne sara code first_name wale ka likha hai toh hum <br>email ko bhi kaise dikhaye inn sabhi chezo k sath jo humne first_name wale ke sath kiya hai isliye hum <br>'Loop Form Fields' padhenge </h1>
 </body>
 </html>
