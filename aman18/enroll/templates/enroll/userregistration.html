@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>form</h1>
+    <form action="" method="get">
+        <table>
+            {{form}}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    <h1>form.as_table same as form</h1>
+    <form action="" method="get">
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    <h1>form.as_p</h1>
+    <form action="" method="get">
+        <table>
+            {{form.as_p}}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    <h1>form.as_ul</h1>
+    <form action="" method="get">
+        <table>
+            {{form.as_ul}}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+
+    <h1>form.name and form.email</h1>
+    <form action="" method="get">
+        <table>
+            {{form.name}}
+            {{form.email}}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
