@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+   <form action="" method="get">
+    {{form.first_name.label}}
+    {{form.email.label}}
+    {{form.phone.label}}
+    <br><hr>
+
+    <!-- OR -->
+    <!-- Best Method -->
+    <br><hr>
+    {% for field in form.visible_fields %}  <!-- Sirf visible fields dikhenge abb -->
+        {{field.label}}
+        <br>
+        {{field.label_tag}}
+        <br>
+        {{field}}
+        <br>
+    {% endfor %}
+    {% for hidden in form.hidden_fields %}  <!-- Sirf Hidden fields dikhenge abb view page source mai only -->
+        {{hidden}}
+        <br>
+    {% endfor %}
+    <input type="submit" value="Submit">
+   </form>    
+</body>
+</html>
