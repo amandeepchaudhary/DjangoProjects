@@ -7,6 +7,12 @@
     <title>Student Registration</title>
 </head>
 <body>
-    {{form}}
+    <form action="" method="get">
+        {{form.as_p}}
+        <p>
+            post is used where we want security 
+            get is used where security is not an issue because it shows everything in the url line
+        </p>
+    </form>
 </body>
 </html>
