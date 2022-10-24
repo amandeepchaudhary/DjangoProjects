@@ -5,5 +5,5 @@ from enroll.forms import Student
 
 
 def stureg(request):
-    st = Student(initial={'name':'Ishu'})  # This value will execute at runtime so it will overwrite the values given in forms.py
+    st = Student()  # This value will execute at runtime so it will overwrite the values given in forms.py
     return render(request, 'enroll/userregistration.html', {'form': st})
