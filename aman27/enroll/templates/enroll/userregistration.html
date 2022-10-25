@@ -12,7 +12,7 @@
     <title>Student Registration</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="POST" novalidate>
         {% csrf_token %} <!--Gives protection against cross site request forgery and add a hidden input field with random value in form tag by which it will gets impposible to attack the user-->
         {{form.as_p}}
         <input type="submit" value="Submit">
