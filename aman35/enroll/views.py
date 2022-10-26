@@ -3,9 +3,9 @@ from enroll.forms import student
 from django.http import HttpResponseRedirect
 
 # Create your views here.
-
 def success(request):
     return render(request, 'enroll/success.html')
+
 def sturegistration(request):
     if request.method == 'POST':
         st = student(request.POST)
@@ -13,9 +13,8 @@ def sturegistration(request):
             print('Name:', st.cleaned_data['name'])
             print('Email:', st.cleaned_data['email'])
             print('Password:', st.cleaned_data['password'])
-            print('Password(again):', st.cleaned_data['rpassword'])
-            return HttpResponseRedirect('/home/success/')
-    
+            return HttpResponseRedirect('/success/')
+            
     else:        
         st = student()
     return render(request, 'enroll/registration.html', {'form':st})

@@ -3,16 +3,6 @@ from django.core import validators
 
 
 class student(forms.Form):
-    name = forms.CharField()
-    email = forms.EmailField()
-    password = forms.CharField(widget=forms.PasswordInput())
-    rpassword = forms.CharField(label='Password(again)', widget=forms.PasswordInput())
-
-    def clean(self):
-        cleaned_data = super().clean()
-        valpwd = cleaned_data['password']
-        valrpwd = cleaned_data['rpassword']
-        if len(valpwd) and len(valrpwd) < 8:
-            raise forms.ValidationError('Password aleast having 8 Characters')
-        if valpwd != valrpwd:
-            raise forms.ValidationError('Password Does Not Match!!!')
+    name = forms.CharField(error_messages = {'required':'Enter your name'})
+    email = forms.EmailField(error_messages = {'required':'Enter your email'}, min_length=10, max_length=50)
+    password = forms.CharField(widget = forms.PasswordInput(),error_messages = {'required':'Enter your password'}, min_length=8, max_length=20)
