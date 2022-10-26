@@ -12,6 +12,8 @@ def studetails(request):
             print('Form Validated')
             print('Name:', st.cleaned_data['name'])  # Key in forms
             print('Email:', st.cleaned_data['email'])  # Key in forms
+            print('Password:', st.cleaned_data['password'])  # Key in forms
+            print('Password(again):', st.cleaned_data['rpassword'])  # Key in forms
             
     else:
         st = student()
