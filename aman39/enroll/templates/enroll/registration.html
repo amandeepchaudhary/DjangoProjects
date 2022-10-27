@@ -10,17 +10,7 @@
     {% block content %}
     <form action="" method="POST" novalidate>
         {% csrf_token %}
-        {{form.non_key_errors}}  <!--This is most important for error messages because it gives the error message of form by addressing them as non_key_errors-->
-        {% for field in form %}
-            <div>
-                {{field.label_tag}} 
-                {{field}}
-                <!-- {{field.errors}} main if we want to give different styles and things we can't seperately so,we use for loop for individual stuff-->
-                {% for error in field.errors %}
-                    <span class="errorlist">{{error}}</span>    
-                {% endfor %}
-            </div>
-        {% endfor %}
+        {{form.as_p}}
         <input type="submit" value="Submit">
     </form>
     ok!!

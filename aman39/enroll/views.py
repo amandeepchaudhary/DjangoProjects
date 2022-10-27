@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from enroll.forms import studentform
 from django.http import HttpResponseRedirect
+from enroll.models import user
 
 
 # Create your views here.
@@ -19,6 +20,8 @@ def sturegistration(request):
             print(nm)
             print(em)
             print(ps)
+            reg = user(name=nm, email=em, password=ps)
+            reg.save()
             return HttpResponseRedirect('/success/')
             
     else:        
