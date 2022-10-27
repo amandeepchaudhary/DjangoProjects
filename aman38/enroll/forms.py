@@ -1,8 +1,8 @@
 from django import forms    
-from django.core import validators
+from enroll.models import user
 
 
-class student(forms.Form):
-    name = forms.CharField(error_messages = {'required':'Enter your name'})
-    email = forms.EmailField(error_messages = {'required':'Enter your email'})
-    password = forms.CharField(widget = forms.PasswordInput(),error_messages = {'required':'Enter your password'})
+class  studentform(forms.ModelForm):
+    class Meta:
+        model = user  # if we add () then it is callable,if () not there then it is not callable
+        fields = ['name', 'email', 'password']
