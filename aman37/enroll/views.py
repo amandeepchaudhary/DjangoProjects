@@ -10,9 +10,9 @@ def sturegistration(request):
     if request.method == 'POST':
         st = student(request.POST)
         if st.is_valid():
-            print('Name:', st.cleaned_data['name'])
-            print('Email:', st.cleaned_data['email'])
-            print('Password:', st.cleaned_data['password'])
+            nm = st.cleaned_data['name']
+            em = st.cleaned_data['email']
+            ps = st.cleaned_data['password']
             return HttpResponseRedirect('/success/')
             
     else:        
