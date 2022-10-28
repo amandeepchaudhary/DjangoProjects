@@ -3,8 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def home(request):
-    return render(request, 'enroll/home.html')
+def home(request, Check):
+    return render(request, 'enroll/home.html', {'ch':Check})
 
 # def details(request, my_id):
 #     student = {'id': my_id , 'name':'aman'}

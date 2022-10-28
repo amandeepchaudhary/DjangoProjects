@@ -20,6 +20,6 @@ from enroll import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name="home"),
+    path('', views.home, {'Check':'OK'}, name="home"),  # Passing extra options to views functions
     path('student/', include('enroll.urls')),
 ]
