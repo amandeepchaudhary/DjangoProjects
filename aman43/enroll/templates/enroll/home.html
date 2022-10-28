@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Home {{ch}}</h1>
+    <a href="{% url 'year' 0 2022 %}">Session Year of the Students</a>
+    <br>
+    <hr>
     <a href="{% url 'details' 1 %}">Student 1</a>
     <a href="{% url 'details' 2 %}">Student 2</a>
     <a href="{% url 'details' 3 %}">Student 3</a>
@@ -17,6 +20,13 @@
     <a href="{% url 'subdetails' 2 6 %}">Sub Student 2</a>
     <a href="{% url 'subdetails' 3 7 %}">Sub Student 3</a>
     <a href="{% url 'subdetails' 4 8 %}">Sub Student 4</a>
+    
+    <a href="{% url 'year' 1 2022 %}">Session Year of the Students 1</a>
+    <a href="{% url 'year' 2 2022 %}">Session Year of the Students 2</a>
+    <a href="{% url 'year' 3 2022 %}">Session Year of the Students 3</a>
+    <a href="{% url 'year' 4 2022 %}">Session Year of the Students 4</a>
+
+    
 
 </body>
 </html>
