@@ -1,24 +1,62 @@
 print('Hello User!! Welcome to the Calculator Made by Aman.')
 b = int(input('''What do you want to do:
-    1 = Addition, Subtraction, Divide, Multiply  
+    1 = Addition, Subtraction, Divide, Multiply, Power, Percent
     2 = Converting Values like CM to M
     Enter Your Choice:'''))
 
 
 if b==1:
-    a = float(input('Enter First Number:'))
+    d = int(input('''Select What you want to do with the Number 
+        1 = +,-,*,/ 
+        2 = ^
+        3 = %
+        Enter Your Choice:'''))
+    if d==1:
+        a = float(input('Enter First Number:'))
 
-    c = float(input('Enter Second Number:'))
+        c = float(input('Enter Second Number:'))
 
-    d = input('Select What you want to do with the Number +,-,*,/ :')
-    if d=='+':
-        print('Your Answer is:', a+c)
-    elif d=='-':
-        print('Your Answer is:', a-c)
-    elif d=='*':
-        print('Your Answer is:', a*c)
-    elif d=='/':
-        print('Your Answer is:', a/c)
+        d1 = input('Select What you want to do with the Number (+,-,*,/):')
+        if d1=='+':
+            print('Your Answer is:', a+c)
+        elif d1=='-':
+            print('Your Answer is:', a-c)
+        elif d1=='*':
+            print('Your Answer is:', a*c)
+        elif d1=='/':
+            print('Your Answer is:', a/c)
+        else:
+            print('Enter a Valid Choice!!')
+
+    if d == 2:
+        d21 = int(input('Enter Number:'))
+        d22 = int(input('Enter Power (Square=2,Cube=3,etc):'))
+        def power(self,power):
+            self.pw = power
+            def powerwork():
+                if self.pw == 2:
+                    print(d21*d21)
+            return powerwork()
+
+        power(d22)
+
+    if d == 3:
+        d3 = int(input('%/ of Number is = 1 OR Number to % = 2 Simple % = 3'))
+        if d3 ==1:
+            d31 = int(input('Enter the %:'))
+            d32 = int(input('Enter the Number:'))
+            d33 = (d31/100) * d32
+            print(f'%d% of %d is %d',d31,d32,d33)
+        if d3 ==3:
+            d39 = int(input('For how many number you wanna get the %:'))
+            li = []
+            i = 0
+            while i<d39:
+                li.append(int(input('Enter the Number:')))
+                i+=1
+
+            for j in range(len(li)):
+                print(li[j])
 else:
     e = float(input('Enter Number for Conversion:'))
     f = int(input('''What Conversion do you want to do:
