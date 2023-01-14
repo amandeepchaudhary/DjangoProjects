@@ -7,7 +7,7 @@ def home(request):
     return render(request,'core/home.html',context)
     print(request)
 def contact(request):
-    # context={'contact':'active'}
+    context={'contact':'active'}
     # csrf_protect
     if request.method == 'POST':
         visitor = VisitorInfo(request.POST)
