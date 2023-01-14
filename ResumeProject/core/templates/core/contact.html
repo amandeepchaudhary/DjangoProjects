@@ -5,52 +5,58 @@
     <h1 class="text-warning mb-5 border-bottom">Contact Us</h1>
     <div class="row text-white mb-5">
         <p class="mx-auto mb-5">
-            Do you have any questions? please do not hesitate to  contact me.                
+            Do you have any questions? please do not hesitate to contact me.
         </p>
-        <div class="col-sm-9 mb-5">
-            <form action="">
-                <div class="form-row">
+        <div class="col-sm-5 mb-2">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+            <!--    <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputName">Name</label>
-                        <input type="text" class="form-control" id="inputName">
-                    </div>
-                    
+                        <label for="id_visitor_name">Name</label>
+                        {{form.visitor_name}}
+                        <!-- <input type="text" class="form-control" id="inputName"> -->
+                    <!-- </div>
+
                     <div class="form-group col-md-6">
-                        <label for="inputEmail">Email *</label>
-                        <input type="email" class="form-control" id="inputEmail" required />
-                    </div>
+                        <label for="id_email">Email *</label>
+                        {{form.email}}
+                        <!-- <input type="email" class="form-control" id="inputEmail" required /> -->
+                    <!-- </div>
                 </div>
                 <div class="form-group">
-                    <label for="Subjecttext">Subject</label>
-                    <input type="text" class="form-control" id="Subjecttext">
-                </div>
+                    <label for="id_subject">Subject</label>
+                    {{form.subject}}
+                    <!-- <input type="text" class="form-control" id="Subjecttext"> -->
+                <!-- </div>
                 <div class="mb-3">
-                    <label for="textmsg">Message *</label>
-                    <textarea id="textmsg" cols="30" rows="10" class="form-control" required></textarea>
+                    <label for="id_message">Message *</label>
+                    {{form.message}}
+                    <!-- <textarea id="textmsg" cols="30" rows="10" class="form-control" required></textarea> -->
+                    <button class="btn btn-primary my-2 mx-1" type="submit">Send</button>
                 </div>
-                <button class="btn btn-primary" type="submit">Send</button>
             </form>
         </div>
-        <div class="col-sm-3 text-center">
+        <div class="col-sm-2 text-center">
             <ul class="list-unstyled">
                 <li>
                     <i class="fas fa-map-marker-alt fa-2x wd-color"></i>
-                    <p>
+                    <p class="text-white">
                         Delhi,India
                     </p>
                 </li>
 
                 <li>
                     <i class="fas fa-phone mt-4 fa-2x a-color"></i>
-                    <p>
-                        +91 8170000000
+                    <p class="text-white">
+                        +91 8178750436
                     </p>
                 </li>
-                
+
                 <li>
                     <i class="fas fa-envelope mt-4 fa-2x p-color"></i>
-                    <p>
-                        contact@aman.com
+                    <p class="text-white">
+                        amanchaudhary.ac1@gmail.com
                     </p>
                 </li>
             </ul>
@@ -59,10 +65,12 @@
 
 </div>
 <div class="text-center">
-    <a href="#" target="_blank"><i class="fab fa-twitter fa-2x mr-3 wd-color"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-facebook fa-2x mr-3 facebok-color"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram fa-2x mr-3 insta-color"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-youtube fa-2x mr-3 youtube-color"></i></a>
+    <!-- <a href="#" target="_blank"><i class="fab fa-twitter fa-2x mr-3 wd-color"></i></a> -->
+    <!-- <a href="#" target="_blank"><i class="fab fa-facebook fa-2x mr-3 facebok-color"></i></a> -->
+    <!-- <a href="#" target="_blank"><i class="fab fa-instagram fa-2x mr-3 insta-color"></i></a> -->
+    <!-- <a href="#" target="_blank"><i class="fab fa-youtube fa-2x mr-3 youtube-color"></i></a> -->
+    <a href="https://github.com/amandeepchaudhary" target="_blank"><i class="fab fa-github fa-3x mr-3 github-color"></i></a>
+    <a href="https://linkedin.com/in/amanchaudharyd" target="_blank"><i class="fab fa-linkedin fa-3x mr-3 linkedin-color"></i></a>
 </div>
 
 {% endblock content %}
