@@ -31,14 +31,15 @@ if b==1:
     if d == 2:
         d21 = int(input('Enter Number:'))
         d22 = int(input('Enter Power (Square=2,Cube=3,etc):'))
-        def power(self,power):
-            self.pw = power
+        def power(self,power1):
+            self.pw = power1
             def powerwork():
                 if self.pw == 2:
                     print(d21*d21)
             return powerwork()
+        # if d22 == int:
+            # power({power1: d22})
 
-        power(d22)
 
     if d == 3:
         d3 = int(input('%/ of Number is = 1 OR Number to % = 2 Simple % = 3'))
