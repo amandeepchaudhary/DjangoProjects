@@ -65,3 +65,15 @@ def Palindrome():
 
 
 Palindrome()
+
+cost_price = int(input("Enter the Cost Price:"))
+selling_price = int(input("Enter the Selling Price:"))
+
+# calculate profit or loss amount and print it
+if cost_price>selling_price:
+    lp = cost_price - selling_price
+    # lp = lp*(-1)
+    print(lp)
+else:
+    lp = cost_price - selling_price
+    print(lp)
