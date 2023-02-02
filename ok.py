@@ -83,10 +83,32 @@ import re
 
 
 #/ Regular Expression (Redux)
-its_me = '''+91 8178750436
-+91 4672636278 +91 7867676768 +91 1234567890'''
-pattern = re.compile(r'\d{10}')
+# its_me = '''+91 8178750436
+# +91 4672636278 +91 7867676768 +91 1234567890'''
+# pattern = re.compile(r'\d{10}')
 
-matching = pattern.finditer(its_me)
-for match in matching:
-    print(match)
+# matching = pattern.finditer(its_me)
+# for match in matching:
+#     print(match)
+
+n = int(input("Enter a number to show Star space pyramid: "))
+# for i in range(n):
+#     o = (n-1)-i
+#     print((o*" "),((i+1)*"* "))
+
+for i in range(n):
+    o = (n-1)-i
+    for j in range((2*i)+1):
+        # i[j]=="*"
+        if j==0:
+            print(o*" ",end="") 
+        if j%2==0:
+            print("*",end="")
+        if j%2!=0:
+            print(" ", end="")
+    print("")    
+            # print(((i+1)*"*"))
+            # break
+        # else:
+        #     print(" ")
+# print(0%2)
